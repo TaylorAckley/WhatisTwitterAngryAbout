@@ -1,0 +1,245 @@
+{
+  "ResultList": [
+    {
+      "Index": 0,
+      "Sentiment": "NEUTRAL",
+      "SentimentScore": {
+        "Positive": 0.35328495502471924,
+        "Negative": 0.09200874716043472,
+        "Neutral": 0.5546932816505432,
+        "Mixed": 0.000012932382560393307
+      }
+    },
+    {
+      "Index": 1,
+      "Sentiment": "NEUTRAL",
+      "SentimentScore": {
+        "Positive": 0.39269500970840454,
+        "Negative": 0.000749671773519367,
+        "Neutral": 0.6065480709075928,
+        "Mixed": 0.0000072500847636547405
+      }
+    },
+    {
+      "Index": 2,
+      "Sentiment": "POSITIVE",
+      "SentimentScore": {
+        "Positive": 0.8188774585723877,
+        "Negative": 0.00041524518746882677,
+        "Neutral": 0.18069909512996674,
+        "Mixed": 0.000008152442205755506
+      }
+    },
+    {
+      "Index": 3,
+      "Sentiment": "POSITIVE",
+      "SentimentScore": {
+        "Positive": 0.8806747198104858,
+        "Negative": 0.0015472897794097662,
+        "Neutral": 0.11773361265659332,
+        "Mixed": 0.000044401633203960955
+      }
+    },
+    {
+      "Index": 4,
+      "Sentiment": "NEUTRAL",
+      "SentimentScore": {
+        "Positive": 0.02328435704112053,
+        "Negative": 0.001194179174490273,
+        "Neutral": 0.9754312038421631,
+        "Mixed": 0.00009019611024996266
+      }
+    },
+    {
+      "Index": 5,
+      "Sentiment": "POSITIVE",
+      "SentimentScore": {
+        "Positive": 0.9047534465789795,
+        "Negative": 0.0019320659339427948,
+        "Neutral": 0.09328392893075943,
+        "Mixed": 0.000030456218155450188
+      }
+    },
+    {
+      "Index": 6,
+      "Sentiment": "POSITIVE",
+      "SentimentScore": {
+        "Positive": 0.9616852402687073,
+        "Negative": 0.00016414230049122125,
+        "Neutral": 0.03814838081598282,
+        "Mixed": 0.000002239115246993606
+      }
+    },
+    {
+      "Index": 7,
+      "Sentiment": "NEUTRAL",
+      "SentimentScore": {
+        "Positive": 0.09995543211698532,
+        "Negative": 0.002955592703074217,
+        "Neutral": 0.8970857262611389,
+        "Mixed": 0.000003319478082630667
+      }
+    },
+    {
+      "Index": 8,
+      "Sentiment": "NEUTRAL",
+      "SentimentScore": {
+        "Positive": 0.028920404613018036,
+        "Negative": 0.0003256973286624998,
+        "Neutral": 0.9707512259483337,
+        "Mixed": 0.000002716798917390406
+      }
+    },
+    {
+      "Index": 9,
+      "Sentiment": "NEUTRAL",
+      "SentimentScore": {
+        "Positive": 0.38325294852256775,
+        "Negative": 0.22379358112812042,
+        "Neutral": 0.3903846740722656,
+        "Mixed": 0.002568729454651475
+      }
+    },
+    {
+      "Index": 10,
+      "Sentiment": "NEUTRAL",
+      "SentimentScore": {
+        "Positive": 0.0630352646112442,
+        "Negative": 0.002065467881038785,
+        "Neutral": 0.9348977208137512,
+        "Mixed": 0.0000015523150977969635
+      }
+    },
+    {
+      "Index": 11,
+      "Sentiment": "POSITIVE",
+      "SentimentScore": {
+        "Positive": 0.5232834219932556,
+        "Negative": 0.0007326573831960559,
+        "Neutral": 0.4757663905620575,
+        "Mixed": 0.00021748046856373549
+      }
+    },
+    {
+      "Index": 12,
+      "Sentiment": "NEUTRAL",
+      "SentimentScore": {
+        "Positive": 0.4465673863887787,
+        "Negative": 0.002247273689135909,
+        "Neutral": 0.5511516332626343,
+        "Mixed": 0.00003370892954990268
+      }
+    },
+    {
+      "Index": 13,
+      "Sentiment": "NEUTRAL",
+      "SentimentScore": {
+        "Positive": 0.0019574109464883804,
+        "Negative": 0.00020388714619912207,
+        "Neutral": 0.997837483882904,
+        "Mixed": 0.000001155650807049824
+      }
+    },
+    {
+      "Index": 14,
+      "Sentiment": "NEUTRAL",
+      "SentimentScore": {
+        "Positive": 0.06370226293802261,
+        "Negative": 0.0021185402292758226,
+        "Neutral": 0.9338652491569519,
+        "Mixed": 0.0003139316977467388
+      }
+    },
+    {
+      "Index": 15,
+      "Sentiment": "NEUTRAL",
+      "SentimentScore": {
+        "Positive": 0.39269500970840454,
+        "Negative": 0.000749671773519367,
+        "Neutral": 0.6065480709075928,
+        "Mixed": 0.0000072500847636547405
+      }
+    },
+    {
+      "Index": 16,
+      "Sentiment": "NEUTRAL",
+      "SentimentScore": {
+        "Positive": 0.33314085006713867,
+        "Negative": 0.032533302903175354,
+        "Neutral": 0.6343217492103577,
+        "Mixed": 0.000004165964128333144
+      }
+    },
+    {
+      "Index": 17,
+      "Sentiment": "NEUTRAL",
+      "SentimentScore": {
+        "Positive": 0.16497951745986938,
+        "Negative": 0.020264843478798866,
+        "Neutral": 0.8147445321083069,
+        "Mixed": 0.000011136346984130796
+      }
+    },
+    {
+      "Index": 18,
+      "Sentiment": "NEUTRAL",
+      "SentimentScore": {
+        "Positive": 0.06088264286518097,
+        "Negative": 0.0013576067285612226,
+        "Neutral": 0.9377560019493103,
+        "Mixed": 0.000003812190243479563
+      }
+    },
+    {
+      "Index": 19,
+      "Sentiment": "POSITIVE",
+      "SentimentScore": {
+        "Positive": 0.9496535658836365,
+        "Negative": 0.0004813676932826638,
+        "Neutral": 0.04986225813627243,
+        "Mixed": 0.0000027809012408397393
+      }
+    },
+    {
+      "Index": 20,
+      "Sentiment": "NEUTRAL",
+      "SentimentScore": {
+        "Positive": 0.055796630680561066,
+        "Negative": 0.00411535007879138,
+        "Neutral": 0.9400745630264282,
+        "Mixed": 0.000013427697012957651
+      }
+    },
+    {
+      "Index": 21,
+      "Sentiment": "NEUTRAL",
+      "SentimentScore": {
+        "Positive": 0.4669933319091797,
+        "Negative": 0.0028357997070997953,
+        "Neutral": 0.5301648378372192,
+        "Mixed": 0.0000060832194321847055
+      }
+    },
+    {
+      "Index": 22,
+      "Sentiment": "NEUTRAL",
+      "SentimentScore": {
+        "Positive": 0.23186056315898895,
+        "Negative": 0.0008397912024520338,
+        "Neutral": 0.7672946453094482,
+        "Mixed": 0.000005063013759354362
+      }
+    },
+    {
+      "Index": 23,
+      "Sentiment": "POSITIVE",
+      "SentimentScore": {
+        "Positive": 0.992210865020752,
+        "Negative": 0.0002480743278283626,
+        "Neutral": 0.00753740081563592,
+        "Mixed": 0.000003736291773748235
+      }
+    }
+  ],
+  "ErrorList": []
+}
