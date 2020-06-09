@@ -6,7 +6,7 @@ export class Controller {
 
   static async handle(req: Request, res: Response, next) {
     try {
-      var readable = fs.createReadStream('./tweets.json');
+      var readable = fs.createReadStream('./data/processed-data.json');
       readable.pipe(res);
     } catch(ex) {
       next(ex);

@@ -1,6 +1,6 @@
 export class AnalysisResults {
-  scores: Tabulation;
-  counts: Tabulation;
+  scores: Tabulation = new Tabulation();
+  counts: Tabulation = new Tabulation();
 }
 
 export class Tabulation {

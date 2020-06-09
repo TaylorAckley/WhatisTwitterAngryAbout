@@ -1,7 +1,94 @@
-<div class="clr-row">
-  <div class="clr-col clr-offset-2">
-      <h1>What is Twitter Angry About, Today?</h1>
+<div class="main-container">
+  <div class="alert alert-app-level top-banner-alert" role="alert">
+    <div class="alert-items">
+        <div class="alert-item static">
+            <div class="alert-icon-wrapper">
+                <clr-icon class="alert-icon" shape="info-circle"></clr-icon>
+            </div>
+            <div class="alert-text">
+                #BlackLivesMatter
+            </div>
+        </div>
+    </div>
+    <button type="button" class="close" aria-label="Close">
+        <clr-icon aria-hidden="true" shape="close"></clr-icon>
+    </button>
+</div>
+<header class="header header-7">
+  <div class="branding">
+      <span class="title">{{ getHeaderSentimentText() }}</span>
+  </div>
+</header>
+<div class="content-container">
+  <div class="content-area">
+    <div class="clr-row">
+      <div class="clr-col clr-offset-1">
+          <h3>{{ getSubtitleSentimentText() }} </h3>
+      </div>
+    </div>
+    <div class="clr-row" *ngIf="loading">
+      <div class="clr-col clr-offset-2">
+        <span class="spinner">
+          Loading...
+      </span>
+      </div>
+    </div>
+    <div class="clr-row" *ngIf="!loading">
+      <div class="clr-col-1"></div>
+      <div class="clr-col-lg-5 clr-col-md-8 clr-col-10" *ngFor="let trend of getNegativeData()">
+        <div class="card">
+            <div class="card-header">
+              <h1>{{texts.label_trend}}: <span class="text-red">{{trend.name}}</span></h1>
+            </div>
+            <div class="card-block">
+                <div class="card-title">
+
+                </div>
+                <div class="card-text">
+                  <table class="table">
+                    <thead>
+                        <tr>
+                            <th>{{texts.label_sentiment}}</th>
+                            <th>{{texts.label_score}} <a href="..." role="tooltip" aria-haspopup="true" class="tooltip tooltip-lg">
+                              <clr-icon shape="info-circle" size="24"></clr-icon>
+                              <span class="tooltip-content">{{texts.tooltip_tweets_score}}</span>
+                          </a></th>
+                            <th>{{texts.label_tweets}} <a href="..." role="tooltip" aria-haspopup="true" class="tooltip tooltip-lg">
+                              <clr-icon shape="info-circle" size="24"></clr-icon>
+                              <span class="tooltip-content">{{texts.tooltip_tweets_count}}</span>
+                          </a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let sentiment of sentiments">
+                            <td><span [class]="getSentimentClass(sentiment)">{{ sentiment | titlecase }}</span></td>
+                            <td>{{ getSentimentScore(sentiment, trend) | number}}</td>
+                            <td>{{ getSentimentCount(sentiment, trend)}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-sm btn-link" target="_blank" [href]="trend.url">View Trend&nbsp;<clr-icon shape="pop-out"></clr-icon></a>
+            </div>
+        </div>
+        <div class="clr-col-1"></div>
+    </div>
+    </div>
+    <div class="clr-row mt-5">
+      <div class="clr-col-11 clr-offset-1">
+        <h3>Why?</h3>
+        <p>Honestly, no reason other than to try out Amazon's Comprehend API.  Though it is nice to know which trends to avoid if you're just not in the right mood.</p>
+      </div>
+    </div>
+    <div class="clr-row mt-1">
+      <div class="clr-col-11 clr-offset-1">
+        <h3>Why only sample {{constants.twitter_tweets}} tweets?</h3>
+        <p>Because these AWS charges per request and I can only send 15 tweets in a single request, in other words it gets expensive to do more.   Regardless, you would be surprised how much the results don't change when you add in more tweets.</p>
+      </div>
+
+    <router-outlet></router-outlet>
   </div>
 </div>
-
-<router-outlet></router-outlet>
+</div>

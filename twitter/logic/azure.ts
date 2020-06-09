@@ -36,7 +36,6 @@ export class AzureAnalyzer {
   }
 
   static transformBatch(results, resultSet) {
-    debugger;
       for (const innerResult of resultSet) {
         results.push({
           scores: innerResult.confidenceScores,

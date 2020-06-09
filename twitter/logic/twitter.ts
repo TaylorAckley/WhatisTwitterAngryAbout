@@ -1,11 +1,11 @@
 import axios from 'axios';
-import * as fs from 'fs';
+import { constants } from '../src/assets/constants';
 import { Trend, TrendsResponse } from './models/trends';
 
 export class Twitter {
   private static token: any;
-  private static tweets = 15;
-  private static trends = 5;
+  private static tweets = constants.twitter_tweets;
+  private static trends = constants.twitter_trends;
 
   static async getData() {
     try {
@@ -17,12 +17,14 @@ export class Twitter {
       if (this.trends && this.trends < trendData.trends.length) {
         trendData.trends = trendData.trends.slice(0, this.trends);
       }
-
-      fs.writeFileSync('./data/twitter-data.json', JSON.stringify(trendData, null, 2));
       return trendData;
     } catch(ex) {
       throw ex;
     }
+  }
+
+  static sort(trendData: TrendsResponse) {
+    return trendData.trends.sort((x, y) => (x.tweet_volume < y.tweet_volume) ? 1 : -1);
   }
 
   static async addTweetsToTrend(trend: Trend) {

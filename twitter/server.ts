@@ -1,15 +1,16 @@
 import { APP_BASE_HREF } from '@angular/common';
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as Sentry from '@sentry/node';
+import * as compression from 'compression';
 import * as express from 'express';
 import { existsSync } from 'fs';
+import * as helmet from 'helmet';
 import { errorHandler } from 'logic/handle-error';
 import { join } from 'path';
 import 'zone.js/dist/zone-node';
 import { App } from './logic/app';
 import { Controller } from './logic/controller';
 import { AppServerModule } from './src/main.server';
-
 
 require('dotenv').config();
 Sentry.init({ dsn: process.env.SENTRY_DSN });
@@ -18,6 +19,8 @@ Sentry.init({ dsn: process.env.SENTRY_DSN });
 // The Express app is exported so that it can be used by serverless Functions.
 export function app() {
   const server = express();
+  server.use(compression());
+  server.use(helmet());
   const distFolder = join(process.cwd(), 'dist/twitter/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
   App.main();
@@ -49,7 +52,9 @@ export function app() {
 
 function run() {
   const port = process.env.PORT || 4000;
-  App.handler();
+  if (App.getIsProcessingEnabled()) {
+    App.handler();
+  }
 
   const server = app();
   server.listen(port, () => {

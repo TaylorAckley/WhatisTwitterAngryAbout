@@ -42,11 +42,10 @@ export class AWSAnalyzer {
   }
 
   static transformBatch(results, resultSet) {
-    debugger;
     for (const result of resultSet.ResultList) {
       results.push({
-        scores: result.SentimentScore,
-        sentiment: result.Sentiment
+        scores: Object.keys(result.SentimentScore).reduce((c, k) => (c[k.toLowerCase().trim()] = result.SentimentScore[k], c), {}),
+        sentiment: result.Sentiment.toLowerCase()
       });
     }
     return results;
