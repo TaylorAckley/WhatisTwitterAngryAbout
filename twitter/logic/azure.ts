@@ -10,7 +10,7 @@ export class AzureAnalyzer {
         const batches = Utils.chunkArray(trend.tweets, 10);
         const client = new TextAnalyticsClient(
           process.env.AZURE_ENDPOINT,
-          new AzureKeyCredential(process.env.AZURE_KEY_1)
+          new AzureKeyCredential(process.env.NS_AZURE_KEY_1)
         );
         let results = [];
         for (const batch of batches) {

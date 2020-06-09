@@ -9,6 +9,11 @@ export class AWSAnalyzer {
       try {
         const BATCH_SIZE = 25;
         const batches = Utils.chunkArray(trend.tweets, 25);
+        const config: Comprehend.ClientConfiguration = {
+          accessKeyId: process.env.NS_AWS_ACCESS_KEY_ID,
+          secretAccessKey: process.env.NS_AWS_SECRET_ACCESS_KEY,
+          region: process.env.NS_AWS_REGION
+        };
         const comprehend = new Comprehend();
         let results = [];
         for (const batch of batches) {
