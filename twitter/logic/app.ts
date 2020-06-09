@@ -15,12 +15,10 @@ export class App {
           App.handler();
         }, null, true, 'America/Los_Angeles');
         job.start();
-        console.log('System TZ next 5: ');
         for (const j of job.nextDates(5)) {
           console.log(j.format("dddd, MMMM Do YYYY, h:mm:ss a z"));
         }
       } catch (ex) {
-        console.log(ex);
         Sentry.captureException(ex);
       }
     }
